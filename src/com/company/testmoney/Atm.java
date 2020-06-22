@@ -1,5 +1,5 @@
 package com.company.testmoney;
 
-public class atm {
+public class Atm {
 
 }
