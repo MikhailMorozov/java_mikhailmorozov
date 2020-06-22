@@ -2,7 +2,7 @@ package com.company.testmoney;
 
 public class DebitCard extends CardImp{
 
-    public DebitCard (){
+    public DebitCard(String nameSurname, int balance) {
         super(nameSurname, balance);
     }
 
