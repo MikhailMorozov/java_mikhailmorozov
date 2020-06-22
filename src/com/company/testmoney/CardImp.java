@@ -10,9 +10,11 @@ public abstract class CardImp implements Card{
         this.balance = balance;
     }
 
-    public abstract void increaseBalance();
+    public abstract void increaseBalance(double amount);
 
-    public abstract void decreaseBalance();
+    public abstract void decreaseBalance(double amount);
+
+    public abstract double getBalance ();
 
 
 }

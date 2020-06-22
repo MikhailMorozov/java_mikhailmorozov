@@ -2,9 +2,11 @@ package com.company.testmoney;
 
 public interface Card {
 
-    void increaseBalance();
+    void increaseBalance(double amount);
 
-    void decreaseBalance();
+    void decreaseBalance(double amount);
+
+    double getBalance ();
 
 
 

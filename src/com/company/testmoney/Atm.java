@@ -4,7 +4,13 @@ public class Atm {
 
     Card cardIn;
 
-    public
+    public Atm(Card cardIn){
+        this.cardIn = cardIn;
+    }
+
+    public void deposit (double amount){
+        cardIn.increaseBalance(amount);
+    }
 
 
 

@@ -7,14 +7,18 @@ public class DebitCard extends CardImp{
     }
 
     @Override
-    public void increaseBalance() {
+    public void increaseBalance(double amount) {
         balance += amount;
     }
 
     @Override
-    public void decreaseBalance() {
+    public void decreaseBalance(double amount) {
         balance -= amount;
 
+    }
+
+    public double getBalance (){
+        return balance;
     }
 
 
