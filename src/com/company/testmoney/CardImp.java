@@ -1,4 +1,18 @@
 package com.company.testmoney;
 
-public class CardImp implements Card{
+public abstract class CardImp implements Card{
+    public String nameSurname;
+    public double balance;
+    public double amount;
+
+    public CardImp(String nameSurname, double balance) {
+        this.nameSurname = nameSurname;
+        this.balance = balance;
+    }
+
+    public abstract void increaseBalance();
+
+    public abstract void decreaseBalance();
+
+
 }
