@@ -2,6 +2,9 @@ package com.company.testmoney;
 
 public class CreditCard extends CardImp{
 
+    public CreditCard(String nameSurname) {
+        super(nameSurname);
+    }
 
     public CreditCard (String nameSurname, int balance) {
         super(nameSurname, balance);
@@ -19,8 +22,13 @@ public class CreditCard extends CardImp{
     }
 
     @Override
+    public void exchangeBalance(double amount){
+        System.out.println(balance/2.4);
+    }
+
+    @Override
     public double getBalance() {
-        return 0;
+        return balance;
     }
 
 

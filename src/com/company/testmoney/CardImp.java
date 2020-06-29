@@ -5,6 +5,10 @@ public abstract class CardImp implements Card{
     public double balance;
     public double amount;
 
+    public CardImp(String nameSurname) {
+        this.nameSurname = nameSurname;
+    }
+
     public CardImp(String nameSurname, double balance) {
         this.nameSurname = nameSurname;
         this.balance = balance;
@@ -13,6 +17,8 @@ public abstract class CardImp implements Card{
     public abstract void increaseBalance(double amount);
 
     public abstract void decreaseBalance(double amount);
+
+    public abstract void exchangeBalance(double amount);
 
     public abstract double getBalance ();
 

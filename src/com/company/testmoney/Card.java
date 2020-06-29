@@ -6,6 +6,8 @@ public interface Card {
 
     void decreaseBalance(double amount);
 
+    void exchangeBalance(double amount);
+
     double getBalance ();
 
 

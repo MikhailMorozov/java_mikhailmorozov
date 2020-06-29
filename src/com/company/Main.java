@@ -15,6 +15,7 @@ public class Main {
         Atm atm1 = new Atm(card1);
 
         atm1.deposit(100);
+        atm1.withdrawal(200);
         System.out.println(card1.getBalance());
 
     }

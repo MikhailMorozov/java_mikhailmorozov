@@ -12,6 +12,10 @@ public class Atm {
         cardIn.increaseBalance(amount);
     }
 
+    public void withdrawal (double amount){
+        cardIn.decreaseBalance(amount);
+    }
+
 
 
 
