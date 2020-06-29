@@ -1,9 +1,12 @@
 package com.company.testmoney;
 
-public abstract class CardImp implements Card{
-    public String nameSurname;
-    public double balance;
-    public double amount;
+import java.math.BigDecimal;
+
+public abstract class CardImp implements Card {
+    protected String nameSurname;
+    protected double balance;
+    protected double amount;
+
 
     public CardImp(String nameSurname) {
         this.nameSurname = nameSurname;
@@ -18,9 +21,9 @@ public abstract class CardImp implements Card{
 
     public abstract void decreaseBalance(double amount);
 
-    public abstract void exchangeBalance(double amount);
+    public abstract void exchangeBalance();
 
-    public abstract double getBalance ();
+    public abstract double getBalance();
 
 
 }

@@ -1,33 +1,35 @@
 package com.company.testmoney;
 
-public class CreditCard extends CardImp{
+import java.math.BigDecimal;
+
+public class CreditCard extends CardImp {
 
     public CreditCard(String nameSurname) {
         super(nameSurname);
     }
 
-    public CreditCard (String nameSurname, int balance) {
+    public CreditCard(String nameSurname, BigDecimal balance) {
         super(nameSurname, balance);
     }
 
 
     @Override
-    public void increaseBalance(double amount) {
+    public void increaseBalance(BigDecimal amount) {
 
     }
 
     @Override
-    public void decreaseBalance(double amount) {
+    public void decreaseBalance(BigDecimal amount) {
 
     }
 
     @Override
-    public void exchangeBalance(double amount){
-        System.out.println(balance/2.4);
+    public void exchangeBalance() {
+        System.out.println(balance / 2.4);
     }
 
     @Override
-    public double getBalance() {
+    public BigDecimal getBalance() {
         return balance;
     }
 
