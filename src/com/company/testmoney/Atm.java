@@ -1,7 +1,5 @@
 package com.company.testmoney;
 
-import java.math.BigDecimal;
-
 public class Atm {
 
     Card cardIn;
@@ -15,7 +13,12 @@ public class Atm {
     }
 
     public void withdrawal (double  amount){
-        cardIn.decreaseBalance(amount);
+        try {
+            cardIn.decreaseBalance(amount);
+        } catch (WithdrawalMoreBalanceException e){
+            System.out.println("много захотел " + e.getAmount());
+        }
+
     }
 
     public void showBalancrOtherCurrency (){

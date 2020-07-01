@@ -19,9 +19,15 @@ public class DebitCard extends CardImp {
     }
 
     @Override
-    public void decreaseBalance(double amount) {
+    public void decreaseBalance (double amount) throws WithdrawalMoreBalanceException{
+        if (amount < balance){
+            balance -= amount;
+        } else {
+            double need = amount - balance;
+            throw new WithdrawalMoreBalanceException(need);
+        }
 
-        balance -= amount;
+
     }
 
     @Override

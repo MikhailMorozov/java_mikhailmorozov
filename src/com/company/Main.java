@@ -15,13 +15,11 @@ public class Main {
         Atm atm1 = new Atm(card1);
 
         atm1.deposit(100);
-        atm1.withdrawal(200);
+        atm1.withdrawal(300);
         System.out.println(card1.getBalance());
-        atm1.showBalancrOtherCurrency();
 
-        atm1 = new Atm(card2);
 
-        atm1.showBalancrOtherCurrency();
+
 
 
 
