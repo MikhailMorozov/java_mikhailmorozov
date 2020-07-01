@@ -8,18 +8,18 @@ public class CreditCard extends CardImp {
         super(nameSurname);
     }
 
-    public CreditCard(String nameSurname, BigDecimal balance) {
+    public CreditCard(String nameSurname, double balance) {
         super(nameSurname, balance);
     }
 
 
     @Override
-    public void increaseBalance(BigDecimal amount) {
+    public void increaseBalance(double amount) {
 
     }
 
     @Override
-    public void decreaseBalance(BigDecimal amount) {
+    public void decreaseBalance(double amount) {
 
     }
 
@@ -29,22 +29,12 @@ public class CreditCard extends CardImp {
     }
 
     @Override
-    public BigDecimal getBalance() {
+    public double getBalance() {
         return balance;
     }
 
 
 
-    /*@Override
-    public void increaseBalance() {
-        balance += amount;
-    }
-
-    @Override
-    public void decreaseBalance() {
-        balance -= amount;
-
-    }*/
 
 
 }

@@ -8,7 +8,7 @@ public class DebitCard extends CardImp {
         super(nameSurname);
     }
 
-    public DebitCard(String nameSurname, BigDecimal balance) {
+    public DebitCard(String nameSurname, double balance) {
         super(nameSurname, balance);
     }
 
@@ -27,7 +27,7 @@ public class DebitCard extends CardImp {
     @Override
     public void exchangeBalance() {
 
-        System.out.println(balance/2 .4);
+        System.out.println(balance / 2.4);
     }
 
     public double getBalance() {
