@@ -15,12 +15,18 @@ public class CreditCard extends CardImp {
 
     @Override
     public void increaseBalance(double amount) {
+        if (amount >= 0){
+            balance += amount;
 
+        } else {
+            double need = amount - balance;
+            throw new NegativeAmountException(need);
+        }
     }
 
     @Override
     public void decreaseBalance(double amount) {
-
+        balance -= amount;
     }
 
     @Override

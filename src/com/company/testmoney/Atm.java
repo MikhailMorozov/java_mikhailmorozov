@@ -9,7 +9,12 @@ public class Atm {
     }
 
     public void deposit (double amount){
-        cardIn.increaseBalance(amount);
+        try {
+            cardIn.increaseBalance(amount);
+        }catch (NegativeAmountException e){
+            System.out.println("ОТРИЦАТЕЛЬНАЯ СУММА ПОПОЛНИЯ " + e.getAmount());
+        }
+
     }
 
     public void withdrawal (double  amount){
@@ -24,10 +29,5 @@ public class Atm {
     public void showBalancrOtherCurrency (){
         cardIn.exchangeBalance();
     }
-
-
-
-
-
 
 }
