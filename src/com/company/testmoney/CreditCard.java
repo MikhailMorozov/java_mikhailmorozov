@@ -6,12 +6,12 @@ public class CreditCard extends Card {
         super(nameSurname);
     }
 
-    public CreditCard(String nameSurname, double balance) {
+    public CreditCard(String nameSurname, BigDecimal balance) {
         super(nameSurname, balance);
     }
 
     @Override
-    public void decreaseBalance(double amount) {
+    public void decreaseBalance(BigDecimal amount) {
         balance -= amount;
     }
 }

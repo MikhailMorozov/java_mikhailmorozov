@@ -1,9 +1,11 @@
 package com.company.testmoney;
 
-public class NegativeAmountException extends RuntimeException {
-    private double amount;
+import java.math.BigDecimal;
 
-    public NegativeAmountException(double amount) {
+public class NegativeAmountException extends RuntimeException {
+    private BigDecimal amount;
+
+    public NegativeAmountException(BigDecimal amount) {
         this.amount = amount;
     }
 

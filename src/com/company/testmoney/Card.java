@@ -1,23 +1,24 @@
 package com.company.testmoney;
 
 
+import java.math.BigDecimal;
 
 public abstract class Card {
     protected String nameSurname;
-    protected double balance;
-    protected double amount;
+    protected BigDecimal balance;
+    protected BigDecimal amount;
 
 
     public Card(String nameSurname) {
         this.nameSurname = nameSurname;
     }
 
-    public Card(String nameSurname, double balance) {
+    public Card(String nameSurname, BigDecimal balance) {
         this.nameSurname = nameSurname;
         this.balance = balance;
     }
 
-    public void increaseBalance(double amount){
+    public void increaseBalance(BigDecimal amount){
         if (amount >= 0){
             balance += amount;
 
@@ -27,7 +28,7 @@ public abstract class Card {
         }
     }
 
-    public abstract void decreaseBalance(double amount);
+    public abstract void decreaseBalance(BigDecimal amount);
 
     public void exchangeBalance(){
         System.out.println(balance / 2.4);

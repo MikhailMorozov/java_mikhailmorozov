@@ -1,9 +1,11 @@
 package com.company.testmoney;
 
-public class WithdrawalMoreBalanceException extends RuntimeException {
-    private double amount;
+import java.math.BigDecimal;
 
-    public WithdrawalMoreBalanceException(double amount) {
+public class WithdrawalMoreBalanceException extends RuntimeException {
+    private BigDecimal amount;
+
+    public WithdrawalMoreBalanceException(BigDecimal amount) {
         this.amount = amount;
     }
 

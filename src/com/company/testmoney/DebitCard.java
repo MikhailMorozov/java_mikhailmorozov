@@ -1,21 +1,23 @@
 package com.company.testmoney;
 
+import java.math.BigDecimal;
+
 public class DebitCard extends Card {
 
     public DebitCard(String nameSurname) {
         super(nameSurname);
     }
 
-    public DebitCard(String nameSurname, double balance) {
+    public DebitCard(String nameSurname, BigDecimal balance) {
         super(nameSurname, balance);
     }
 
     @Override
-    public void decreaseBalance (double amount) throws WithdrawalMoreBalanceException{
+    public void decreaseBalance (BigDecimal amount) throws WithdrawalMoreBalanceException{
         if (amount < balance){
             balance -= amount;
         } else {
-            double need = amount - balance;
+            BigDecimal need = amount - balance;
             throw new WithdrawalMoreBalanceException(need);
         }
     }
