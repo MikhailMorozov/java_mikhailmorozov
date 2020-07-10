@@ -1,5 +1,7 @@
 package com.company.testmoney;
 
+import java.math.BigDecimal;
+
 public class CreditCard extends Card {
 
     public CreditCard(String nameSurname) {
@@ -12,6 +14,6 @@ public class CreditCard extends Card {
 
     @Override
     public void decreaseBalance(BigDecimal amount) {
-        balance -= amount;
+        balance.subtract(amount);
     }
 }

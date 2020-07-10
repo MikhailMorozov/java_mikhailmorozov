@@ -19,11 +19,12 @@ public abstract class Card {
     }
 
     public void increaseBalance(BigDecimal amount){
-        if (amount >= 0){
-            balance += amount;
+
+        if (amount.compareTo(BigDecimal.ZERO)>0){
+            balance.add(amount);
 
         } else {
-            double need = amount - balance;
+            BigDecimal need = amount.subtract(balance);
             throw new NegativeAmountException(need);
         }
     }
@@ -31,10 +32,11 @@ public abstract class Card {
     public abstract void decreaseBalance(BigDecimal amount);
 
     public void exchangeBalance(){
-        System.out.println(balance / 2.4);
+        BigDecimal curs = new BigDecimal("2.4");
+        System.out.println(balance.divide(curs));
     }
 
-    public double getBalance(){
+    public BigDecimal getBalance(){
         return balance;
     }
 

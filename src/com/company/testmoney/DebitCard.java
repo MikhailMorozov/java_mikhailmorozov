@@ -14,10 +14,10 @@ public class DebitCard extends Card {
 
     @Override
     public void decreaseBalance (BigDecimal amount) throws WithdrawalMoreBalanceException{
-        if (amount < balance){
-            balance -= amount;
+        if (amount.compareTo(balance) == -1){
+            balance.subtract(amount);
         } else {
-            BigDecimal need = amount - balance;
+            BigDecimal need = amount.subtract(balance);
             throw new WithdrawalMoreBalanceException(need);
         }
     }

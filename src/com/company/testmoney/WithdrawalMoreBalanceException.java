@@ -9,7 +9,7 @@ public class WithdrawalMoreBalanceException extends RuntimeException {
         this.amount = amount;
     }
 
-    public double getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 }
