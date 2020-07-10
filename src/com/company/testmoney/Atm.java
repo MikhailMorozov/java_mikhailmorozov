@@ -1,5 +1,7 @@
 package com.company.testmoney;
 
+import java.math.BigDecimal;
+
 public class Atm {
 
     private Card cardIn;
@@ -8,7 +10,7 @@ public class Atm {
         this.cardIn = cardIn;
     }
 
-    public void deposit(double amount)  {
+    public void deposit(BigDecimal amount)  {
         try {
             cardIn.increaseBalance(amount);
         } catch (NegativeAmountException e) {
@@ -16,7 +18,7 @@ public class Atm {
         }
     }
 
-    public void withdrawal(double amount) {
+    public void withdrawal(BigDecimal amount) {
         try {
             cardIn.decreaseBalance(amount);
         } catch (WithdrawalMoreBalanceException e) {
