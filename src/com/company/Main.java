@@ -5,6 +5,8 @@ import com.company.testmoney.Card;
 import com.company.testmoney.CreditCard;
 import com.company.testmoney.DebitCard;
 
+import java.math.BigDecimal;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,8 +16,11 @@ public class Main {
 
         Atm atm1 = new Atm(card1);
 
-        atm1.deposit(500);
-        atm1.withdrawal(300);
+        BigDecimal amoutDeposit = BigDecimal.valueOf(500);
+        BigDecimal amoutWithdrawal = BigDecimal.valueOf(300);
+
+        atm1.deposit(amoutDeposit);
+        atm1.withdrawal(amoutWithdrawal);
         System.out.println(card1.getBalance());
         atm1.showBalancrOtherCurrency();
 
