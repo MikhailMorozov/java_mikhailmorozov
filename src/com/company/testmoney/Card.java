@@ -11,6 +11,7 @@ public abstract class Card {
 
     public Card(String nameSurname) {
         this.nameSurname = nameSurname;
+        balance = BigDecimal.valueOf(0);
     }
 
     public Card(String nameSurname, BigDecimal balance) {
@@ -33,7 +34,8 @@ public abstract class Card {
 
     public void exchangeBalance() {
         BigDecimal curs = BigDecimal.valueOf(2.4);
-        System.out.println(balance.divide(curs));
+        balance = balance.divide(curs);
+        System.out.println(balance);
     }
 
     public BigDecimal getBalance() {
